@@ -1,0 +1,96 @@
+@import url(../styles/hero.scss);
+
+
+* {
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(#1c1c1c, #0b0b0b);
+}
+
+
+// NAVBAR avec LOGO ET BARRE DE RECHERCHE
+nav {
+    position: relative;
+    z-index: 99;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 10px;
+
+    @media screen and (max-width: 450px) {
+        flex-direction: column;
+    }
+}
+
+// LOGO
+#logo {
+    color: yellow;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 700;
+
+    #whiteS {
+        color: white;
+        font-size: 36px;
+    }
+
+    #turquoiseTream {
+        color: turquoise;
+    }
+}
+
+
+
+// BARRE DE RECHERCHE
+input[type="text"].searchBar {
+    height: 17px;
+    padding: 0;
+    border: none;
+    outline: none;
+    border: solid 1px white;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    border-radius: 4px;
+}
+
+
+.submitClick {
+    width: 20px;
+    height: 20px;
+}
+
+.feather {
+    vertical-align: middle;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.feather-search {
+    stroke: #000000;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(0, 252, 8);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

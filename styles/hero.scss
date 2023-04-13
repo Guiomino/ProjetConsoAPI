@@ -1,0 +1,136 @@
+
+
+// HERO
+.hero {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 450px;
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 66%);
+    box-shadow: 0px 1px 8px black;
+}
+
+// Recupère l'image créée en typescript pour couvrir toute la section .hero
+.hero img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+// Ajuste le positionnement et la taille des propriétés de la div .hero
+.hero>* {
+    position: absolute;
+    z-index: -1;
+}
+
+
+// MODIFICATION DES ELEMENTS ENFANTS DE HERO
+#informationHero {
+    bottom: 20px;
+    z-index: 99;
+    width: 400px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: sans-serif;
+    gap: 8px;
+
+    @media screen and (max-width: 400px) {
+        //A MODIFIER QUAND IMAGE DE FOND INTEGREE
+        margin: auto;
+    }
+
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    h1 {
+        font-family: sans-serif;
+        font-size: 32px;
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    #details {
+        font-family: sans-serif;
+        font-size: 15px;
+
+        #year,
+        #movieDuration,
+        #voteAverage,
+        #genre {
+            color: rgb(0, 223, 0);
+        }
+    }
+
+
+
+    // BOUTONS DU HERO
+    #buttonsHero {
+        display: flex;
+        gap: 20px;
+    }
+
+    #play {
+        width: 100px;
+        padding: 10px 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #f20000;
+        box-shadow: (inset 40px 0px 30px rgba(0, 0, 0, 0.5)), 0px 0px 5px black;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            box-shadow: (inset -40px 0px 30px rgba(0, 0, 0, 0.5)), 0px 0px 5px black;
+            text-shadow: 0px 0px 5px #000000;
+        }
+
+        #triangle {
+            display: inline-block;
+            height: 0;
+            width: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 15px solid rgb(255, 255, 255);
+        }
+    }
+
+    #trailer {
+        width: 180px;
+        padding: 10px 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #006edc;
+        box-shadow: (inset 60px 0px 30px rgba(0, 0, 0, 0.5)), 0px 0px 5px black;
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-around;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+            box-shadow: (inset -60px 0px 30px rgba(0, 0, 0, 0.5)), 0px 0px 5px black;
+            text-shadow: 0px 0px 5px #000000;
+        }
+
+        #triangle {
+            display: inline-block;
+            height: 0;
+            width: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 15px solid rgb(255, 255, 255);
+        }
+    }
+}
