@@ -1,13 +1,16 @@
-
-
 // HERO
 .hero {
     position: absolute;
     top: 0;
     width: 100%;
     height: 450px;
-    background: linear-gradient(to top right, rgba(0, 0, 0, 0.9) 20%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 66%);
+    background: linear-gradient(to top right, rgba(0, 0, 0, 0.92) 25%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 66%);
     box-shadow: 0px 1px 8px black;
+
+
+    @media screen and (max-width: 400px) {
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 25%, rgba(0, 0, 0, 0.7) 40%, rgba(0, 0, 0, 0) 66%);
+    }
 }
 
 // Recupère l'image créée en typescript pour couvrir toute la section .hero
@@ -28,7 +31,7 @@
 #informationHero {
     bottom: 20px;
     z-index: 99;
-    width: 400px;
+    max-width: 450px;
     margin-left: 20px;
     display: flex;
     flex-direction: column;
@@ -36,15 +39,28 @@
     font-family: sans-serif;
     gap: 8px;
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 700px) {
         //A MODIFIER QUAND IMAGE DE FOND INTEGREE
-        margin: auto;
+        max-width: unset;
+        margin-right: 20px;
     }
 
+    @media screen and (max-width: 400px) {
+        #aVenir {
+            text-align: center;
+        }
+    }
 
     p {
         font-size: 14px;
         font-weight: 400;
+        text-align: justify;
+        text-shadow: 0px 0px 4px black;
+
+        @media screen and (max-width: 400px) {
+            font-size: 12px;
+            text-shadow: 0px 0px 10px black;
+        }
     }
 
     h1 {
@@ -52,16 +68,32 @@
         font-size: 32px;
         font-weight: 900;
         text-transform: uppercase;
+
+        @media screen and (max-width: 400px) {
+            font-size: 15px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2px;
+            text-shadow: 0px 0px 10px black;
+        }
     }
 
     #details {
         font-family: sans-serif;
         font-size: 15px;
 
+        @media screen and (max-width: 400px) {
+            font-size: 12px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 2px;
+        }
+
         #year,
         #movieDuration,
         #voteAverage,
-        #genre {
+        #genre,
+        .greenDetails {
             color: rgb(0, 223, 0);
         }
     }
@@ -72,6 +104,10 @@
     #buttonsHero {
         display: flex;
         gap: 20px;
+
+        @media screen and (max-width: 400px) {
+            justify-content: center;
+        }
     }
 
     #play {
@@ -88,6 +124,13 @@
         justify-content: space-around;
         cursor: pointer;
         transition: 0.3s;
+
+        @media screen and (max-width: 400px) {
+            width: 80px;
+            font-size: 14px;
+            padding: 5px 10px;
+        }
+
 
         &:hover {
             box-shadow: (inset -40px 0px 30px rgba(0, 0, 0, 0.5)), 0px 0px 5px black;
@@ -118,6 +161,15 @@
         justify-content: space-around;
         cursor: pointer;
         transition: 0.3s;
+
+        @media screen and (max-width: 400px) {
+            font-size: 12px;
+            padding: 5px 10px;
+        }
+
+        @media screen and (max-width: 400px) {
+            width: 130px;
+        }
 
         &:hover {
             box-shadow: (inset -60px 0px 30px rgba(0, 0, 0, 0.5)), 0px 0px 5px black;
