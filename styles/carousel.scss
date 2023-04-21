@@ -1,0 +1,122 @@
+// CAROUSEL
+.carousel {
+    height: 30vh;
+    display: flex;
+    overflow-x: auto;
+    // margin-top: 450px;
+    gap: 8px;
+    padding: 25px 0px;
+    margin-bottom: 20px;
+
+    img {
+        border: 1px solid rgb(0, 0, 0);
+        border-radius: 4px;
+        box-shadow: 0px 0px 7px rgb(0, 0, 0);
+        cursor: pointer;
+        filter: brightness(0.8);
+        transition: transform 0.2s ease-in-out;
+
+        &:hover {
+            border: 1px solid rgb(0, 0, 0);
+            box-shadow: 0px 0px 7px rgb(0, 0, 0);
+            transform: scale(1.12);
+            filter: brightness(1);
+        }
+    }
+}
+
+
+/* Style de la barre de défilement */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Style du thumb (la partie de la barre que l'on peut déplacer) */
+::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border: solid rgb(255, 0, 0) 0.5px;
+    border-radius: 2px;
+}
+
+
+
+
+
+.carouselTitre {
+    // margin-top: 420px;
+    box-shadow: 0px 0px 10px #000000;
+
+    .genre {
+        color: white;
+        font-family: sans-serif;
+        margin-left: 20px;
+        display: flex;
+    }
+
+    p {
+        margin-left: 10px;
+        text-transform: uppercase;
+    }
+}
+
+
+#carouselTitre {
+    padding: 10px 0;
+    background: linear-gradient(30deg, #00070d 20%, #00226d 80%, #00070d);
+    margin-bottom: 20px;
+
+}
+
+#carouselTitrePopular {
+    padding: 10px 0;
+    background: linear-gradient(30deg, #0d0004 20%, #6d001b 80%, #0d0006);
+}
+
+
+// BOUTON GENRE
+.genreListBtn>ul {
+    margin: 420px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1000px) {
+        width: 600px;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 310px;
+    }
+
+    @media screen and (max-width: 310px) {
+        width: 200px;
+    }
+}
+
+
+.genreBtn {
+    width: 120px;
+    padding: 5px;
+    border-radius: 4px;
+    border: solid 1px white;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-weight: 500;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    transition: transform 0.2s ease-in-out;
+
+    &:hover,
+    &:active {
+        transform: scale(1.16);
+        background-color: rgba(197, 254, 255, 0.931);
+        color: black;
+        box-shadow: 0px -5px 10px 3px#00ccff, 0px 5px 20px 3px #d400d4;
+    }
+}

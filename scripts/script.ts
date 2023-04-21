@@ -1,8 +1,8 @@
 import { keyTMDB } from "./keyTMDB";
 // La rentrer avec ${keyTMDB} lors des récupération : fetch
 
-import { filmLeMieuxNote } from "./hero";
-filmLeMieuxNote()
+import { upcomingMovieHero } from "./hero";
+upcomingMovieHero()
 
 import { bandeAnnonce } from "./trailerButton";
 bandeAnnonce()
@@ -10,10 +10,11 @@ bandeAnnonce()
 import { playButton } from "./trailerButton";
 playButton()
 
+import { carouselGenre } from "./carouselGenre";
+carouselGenre()
 
-
-
-
+import { carouselPopular } from "./carouselPopular";
+carouselPopular()
 
 
 
@@ -35,6 +36,7 @@ async function searchMovie() {
                 const searchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${keyTMDB}&language=fr-FR&query=${searchQuery}&page=1&include_adult=false`;
                 const searchResponse = await fetch(searchUrl);
                 const searchResults = await searchResponse.json();
+                // upcomingMovieHero()
 
                 console.log(searchResults);
             });
@@ -45,3 +47,18 @@ async function searchMovie() {
 }
 
 searchMovie();
+
+
+
+
+
+
+// SCROLL HORIZONTAL AVEC LA SOURIS DES CAROUSEL
+const scrollContainer = document.querySelectorAll(".carousel");
+for (let i = 0; i < scrollContainer.length; i++) {
+
+    scrollContainer[i]?.addEventListener("wheel", (event) => {
+        event.preventDefault();
+        scrollContainer[i].scrollLeft += event.deltaY;
+    });
+}

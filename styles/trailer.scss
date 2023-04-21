@@ -5,7 +5,21 @@
   width: 80%;
   height: 60%;
   position: fixed;
-  z-index: 999;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.detailsMovie {
+  border: solid 1px #000000;
+  box-shadow: 0px 0px 10px #000000;
+  width: 66%;
+  height: 90%;
+  position: fixed;
+  z-index: 99999;
   top: 0;
   left: 0;
   bottom: 0;
@@ -17,14 +31,11 @@
 
 
 
-
-
-
 // ALERTE DU BOUTON PLAY
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 99999;
   left: 0;
   top: 0;
   width: 100%;

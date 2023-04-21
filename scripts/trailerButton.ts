@@ -58,7 +58,7 @@ export async function bandeAnnonce() {
                 trailerVideo.style.bottom = "0";
                 trailerVideo.style.left = "0";
                 trailerVideo.style.right = "0";
-                trailerVideo.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+                trailerVideo.style.backgroundColor = "rgba(0, 0, 0, 0.85)";
                 trailerVideo.style.display = "flex";
                 trailerVideo.style.justifyContent = "center";
                 trailerVideo.style.alignItems = "center";
@@ -67,7 +67,7 @@ export async function bandeAnnonce() {
             }
 
 
-            // CRÉATION D'UN BOUTON POUR FERMER LA VIDÉO
+            // CRÉATION D'UN BOUTON POUR FERMER LA VIDÉO AVC DU STYLE CSS
             const closeButton: HTMLElement | null = document.createElement('button');
             closeButton.innerHTML = "X";
             closeButton.style.position = "absolute";
@@ -93,7 +93,7 @@ export async function bandeAnnonce() {
         console.log(error);
     }
 }
-bandeAnnonce();
+// bandeAnnonce();
 
 
 
@@ -112,14 +112,20 @@ bandeAnnonce();
 export function playButton() {
 
     const play: HTMLElement | null = document.getElementById("play");
+    const popPlay: HTMLElement | null = document.getElementById("popPlay");
     const modal: HTMLElement | null = document.getElementById("modal");
     if (modal) {
-        modal.style.zIndex = "100";
+        modal.style.zIndex = "99999";
         modal.style.textAlign = 'center';
         const closeModal: HTMLElement | null = document.getElementById("close-modal");
 
 
         play?.addEventListener('click', () => {
+            if (modal)
+                modal.style.display = "block";
+        });
+
+        popPlay?.addEventListener('click', () => {
             if (modal)
                 modal.style.display = "block";
         });

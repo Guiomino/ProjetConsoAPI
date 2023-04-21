@@ -31,7 +31,7 @@
 
         <!-- --- VIDEO BANDE ANNONCE --- -->
         <div class="trailerVideo">
-            <button class="closeButton"></button>
+            <!-- <button class="closeButton"></button> -->
         </div>
 
 
@@ -60,25 +60,81 @@
 
         <!-- --- HERO --- -->
         <section class="hero" id="hero">
-                <div id="informationHero">
-                    <p id="aVenir">A venir</p>
-                    <h1 id="headTitle">TENET</h1>
-                    <div id="details">Année : <span id="year">2020</span> | Note : <span
-                            id="voteAverage">8.3</span><span class="greenDetails"> / 10</span> | Durée : <span
-                            id="movieDuration">140</span><span class="greenDetails"> min</span> | Genre : <span
-                            id="genre">Action</span></div>
-                    <p id="synopsis">Résumé du film</p>
+            <div id="informationHero">
+                <p id="aVenir">A venir</p>
+                <h1 id="headTitle">TITRE DE FILM</h1>
+                <div id="details">Année : <span id="year">0000</span> | Note : <span id="voteAverage">0.0</span><span
+                        class="greenDetails"> / 10</span> | Durée : <span id="movieDuration">000</span><span
+                        class="greenDetails"> min</span> | Genre : <span id="genre">Genre</span></div>
+                <p id="synopsis">Résumé du film</p>
 
-                    <div id="buttonsHero">
-                        <button id="play">
-                            <div id="triangle"></div>PLAY
-                        </button>
-                        <button id="trailer">BANDE ANNONCE</button>
-                    </div>
+                <div id="buttonsHero">
+                    <button id="play">
+                        <div id="triangle"></div>PLAY
+                    </button>
+                    <button id="trailer">BANDE ANNONCE</button>
                 </div>
+            </div>
         </section>
 
 
+
+
+        <div class="genreListBtn" id="genreListBtn">
+            <ul>
+                <li><button class="genreBtn" id="actionBtn">Action</button></li>
+                <li><button class="genreBtn" id="adventureBtn">Aventure</button></li>
+                <li><button class="genreBtn" id="animationBtn">Animation</button></li>
+                <li><button class="genreBtn" id="comedyBtn">Comédie</button></li>
+                <li><button class="genreBtn" id="dramaBtn">Drama</button></li>
+                <li><button class="genreBtn" id="fantasyBtn">Fantasy</button></li>
+                <li><button class="genreBtn" id="horrorBtn">Horror</button></li>
+                <li><button class="genreBtn" id="scienceFiction">Science Fiction</button></li>
+            </ul>
+        </div>
+
+
+
+        <!-- FICHE TECHNIQUE DU FILM SELECTIONNÉ DANS LE CAROUSEL -->
+        <div class="popupMovieBackground hidden">
+        <div class="popupMovie hidden">
+            <!-- <button class="closeButton"></button> -->
+            <div class="popupMovieBackground">
+                <div class="popupMovieInformation" id="popupMovieInformation">
+
+                    <h1 id="popHeadTitle">TITRE DE FILM</h1>
+                    <div id="popDetails">Année : <span id="popYear">0000</span> | Note : <span
+                            id="popVoteAverage">0.0</span><span class="greenDetails"> / 10</span> | Durée : <span
+                            id="popMovieDuration">000</span><span class="greenDetails"> min</span> | Genre : <span
+                            id="popGenre">Genre</span></div>
+                    <p id="popSynopsis">Résumé du film</p>
+
+                    <div id="buttonsPopup">
+                        <button id="popPlay">
+                            <div id="popTriangle"></div>PLAY
+                        </button>
+                        <button id="popTrailer">BANDE ANNONCE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- CAROUSEL PAR GENRE -->
+        <section class="carouselTitre" id="carouselTitre">
+            <div class="genre">Top 20 des films classés par : <p>Action</p>
+            </div>
+            <div class="carousel" id="carousel">
+            </div>
+        </section>
+
+        <!-- CAROUSEL PAR POPULARITÉ -->
+        <section class="carouselTitre" id="carouselTitrePopular">
+            <div class="genre">Top 20 des films les plus <p>Populaire</p>
+            </div>
+            <div class="carousel" id="carouselPopular">
+            </div>
+        </section>
 
 
     </main>

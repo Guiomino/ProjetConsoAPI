@@ -6,7 +6,7 @@ import { keyTMDB } from "./keyTMDB";
 
 
 // RECUPERATION DES DONNÉES DU PREMIER FILM DU TABLEAU UPCOMING DU HERO
-export async function filmLeMieuxNote() {
+export async function upcomingMovieHero() {
     try {
         // Fetch API pour récupérer les données des derniers films
         const upcomingMovie = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${keyTMDB}&language=fr-FR`);
@@ -54,4 +54,4 @@ export async function filmLeMieuxNote() {
         console.log(error)
     }
 }
-filmLeMieuxNote()
+upcomingMovieHero()
